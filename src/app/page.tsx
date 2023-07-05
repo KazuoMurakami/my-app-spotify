@@ -4,8 +4,8 @@ import Image from "next/image";
 export default function Home() {
   return (
     <div className="h-screen flex flex-col mx-2">
-      <div className="flex flex-1">
-        <aside className="w-80 bg-zinc-800/40 p-2 rounded flex flex-col">
+      <div className="flex flex-1 h-32">
+        <aside className="w-80  bg-zinc-800/40 p-2 rounded flex flex-col overflow-y-hidden">
             <nav className="flex flex-col gap-8 p-4 mb-4">
                     <a href="" className="flex gap-3  hover:text-zinc-100 ease-out duration-500"><HomeIcon/>Inicio</a>
                     <a href="" className="flex gap-3 hover:text-zinc-100 ease-out duration-500"><Search/>Buscar</a>
@@ -17,16 +17,27 @@ export default function Home() {
                     <a href="" className="hover:text-zinc-100 ease-out duration-500"><ChevronRight/></a>
                 </div>
             </nav>
-            <nav className="flex flex-col flex-1 ">
-              <a href="" className="flex-1 items-center flex gap-2 hover:bg-zinc-600/20 ease-out duration-500"> <Image src="/images/coldplay.jpeg" alt="album coldplay" width={50} height={50}/> Playlist</a>
-              <a href="" className="flex-1 items-center flex gap-2 hover:bg-zinc-600/20 ease-out duration-500"> <Image src="/images/coldplay.jpeg" alt="album coldplay" width={50} height={50}/> Playlist</a>
-              <a href="" className="flex-1 items-center flex gap-2 hover:bg-zinc-600/20 ease-out duration-500"> <Image src="/images/coldplay.jpeg" alt="album coldplay" width={50} height={50}/> Playlist</a>
-              <a href="" className="flex-1 items-center flex gap-2 hover:bg-zinc-600/20 ease-out duration-500"> <Image src="/images/coldplay.jpeg" alt="album coldplay" width={50} height={50}/> Playlist</a>
-              <a href="" className="flex-1 items-center flex gap-2 hover:bg-zinc-600/20 ease-out duration-500"> <Image src="/images/coldplay.jpeg" alt="album coldplay" width={50} height={50}/> Playlist</a>
-              <a href="" className="flex-1 items-center flex gap-2 hover:bg-zinc-600/20 ease-out duration-500"> <Image src="/images/coldplay.jpeg" alt="album coldplay" width={50} height={50}/> Playlist</a>
-              <a href="" className="flex-1 items-center flex gap-2 hover:bg-zinc-600/20 ease-out duration-500"> <Image src="/images/coldplay.jpeg" alt="album coldplay" width={50} height={50}/> Playlist</a>
-              <a href="" className="flex-1 items-center flex gap-2 hover:bg-zinc-600/20 ease-out duration-500"> <Image src="/images/coldplay.jpeg" alt="album coldplay" width={50} height={50}/> Playlist</a>
+            <div className="flex overflow-auto scrollbar">
+              <nav className="flex flex-col flex-1">
+              <a href="" className="flex-1 items-center flex gap-2 hover:bg-zinc-600/20 ease-out duration-500 pt-2 pr-2 pb-2"> <Image src="/images/coldplay.jpeg" alt="album coldplay" width={50} height={50}/> <span><h1 className="text-zinc-50">title</h1>playlist</span></a>
+              <a href="" className="flex-1 items-center flex gap-2 hover:bg-zinc-600/20 ease-out duration-500 pt-2 pr-2 pb-2"> <Image src="/images/coldplay.jpeg" alt="album coldplay" width={50} height={50}/> <span><h1 className="text-zinc-50">title</h1>playlist</span></a>
+              <a href="" className="flex-1 items-center flex gap-2 hover:bg-zinc-600/20 ease-out duration-500 pt-2 pr-2 pb-2"> <Image src="/images/coldplay.jpeg" alt="album coldplay" width={50} height={50}/> <span><h1 className="text-zinc-50">title</h1>playlist</span></a>
+              <a href="" className="flex-1 items-center flex gap-2 hover:bg-zinc-600/20 ease-out duration-500 pt-2 pr-2 pb-2"> <Image src="/images/coldplay.jpeg" alt="album coldplay" width={50} height={50}/> <span><h1 className="text-zinc-50">title</h1>playlist</span></a>
+              <a href="" className="flex-1 items-center flex gap-2 hover:bg-zinc-600/20 ease-out duration-500 pt-2 pr-2 pb-2"> <Image src="/images/coldplay.jpeg" alt="album coldplay" width={50} height={50}/> <span><h1 className="text-zinc-50">title</h1>playlist</span></a>
+              <a href="" className="flex-1 items-center flex gap-2 hover:bg-zinc-600/20 ease-out duration-500 pt-2 pr-2 pb-2"> <Image src="/images/coldplay.jpeg" alt="album coldplay" width={50} height={50}/> <span><h1 className="text-zinc-50">title</h1>playlist</span></a>
+              <a href="" className="flex-1 items-center flex gap-2 hover:bg-zinc-600/20 ease-out duration-500 pt-2 pr-2 pb-2"> <Image src="/images/coldplay.jpeg" alt="album coldplay" width={50} height={50}/> <span><h1 className="text-zinc-50">title</h1>playlist</span></a>
+              <a href="" className="flex-1 items-center flex gap-2 hover:bg-zinc-600/20 ease-out duration-500 pt-2 pr-2 pb-2"> <Image src="/images/coldplay.jpeg" alt="album coldplay" width={50} height={50}/> <span><h1 className="text-zinc-50">title</h1>playlist</span></a>
+              <a href="" className="flex-1 items-center flex gap-2 hover:bg-zinc-600/20 ease-out duration-500 pt-2 pr-2 pb-2"> <Image src="/images/coldplay.jpeg" alt="album coldplay" width={50} height={50}/> <span><h1 className="text-zinc-50">title</h1>playlist</span></a>
+              <a href="" className="flex-1 items-center flex gap-2 hover:bg-zinc-600/20 ease-out duration-500 pt-2 pr-2 pb-2"> <Image src="/images/coldplay.jpeg" alt="album coldplay" width={50} height={50}/> <span><h1 className="text-zinc-50">title</h1>playlist</span></a>
+              <a href="" className="flex-1 items-center flex gap-2 hover:bg-zinc-600/20 ease-out duration-500 pt-2 pr-2 pb-2"> <Image src="/images/coldplay.jpeg" alt="album coldplay" width={50} height={50}/> <span><h1 className="text-zinc-50">title</h1>playlist</span></a>
+              <a href="" className="flex-1 items-center flex gap-2 hover:bg-zinc-600/20 ease-out duration-500 pt-2 pr-2 pb-2"> <Image src="/images/coldplay.jpeg" alt="album coldplay" width={50} height={50}/> <span><h1 className="text-zinc-50">title</h1>playlist</span></a>
+              <a href="" className="flex-1 items-center flex gap-2 hover:bg-zinc-600/20 ease-out duration-500 pt-2 pr-2 pb-2"> <Image src="/images/coldplay.jpeg" alt="album coldplay" width={50} height={50}/> <span><h1 className="text-zinc-50">title</h1>playlist</span></a>
+              <a href="" className="flex-1 items-center flex gap-2 hover:bg-zinc-600/20 ease-out duration-500 pt-2 pr-2 pb-2"> <Image src="/images/coldplay.jpeg" alt="album coldplay" width={50} height={50}/> <span><h1 className="text-zinc-50">title</h1>playlist</span></a>
+              <a href="" className="flex-1 items-center flex gap-2 hover:bg-zinc-600/20 ease-out duration-500 pt-2 pr-2 pb-2"> <Image src="/images/coldplay.jpeg" alt="album coldplay" width={50} height={50}/> <span><h1 className="text-zinc-50">title</h1>playlist</span></a>
+            
             </nav>
+            </div>
+            
         </aside>
         <main className="flex-1 p-4 bg-gradient-to-b from-green-900 from-10% to-zinc-800/40 to-30% ml-2 rounded">
         main

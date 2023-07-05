@@ -12,7 +12,17 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt-br">
-      <body className="bg-black text-zinc-400 overflow-y-hidden">{children}</body>
+<head>
+  <link
+  rel="icon"
+  href="/icon.png"
+  type="image/png"
+  sizes="32x32"
+/>
+</head>
+      <body className="bg-black text-zinc-400 overflow-y-hidden">
+        {children}
+      </body>
     </html>
   )
 }
