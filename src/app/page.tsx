@@ -1,5 +1,6 @@
 import { Lateral } from "@/components/lateral";
 import { Principal } from "@/components/principal";
+import Rodape from "@/components/rodape";
 
 export default function Home() {
   return (
@@ -10,9 +11,7 @@ export default function Home() {
         <Principal/>
 
       </div>
-      <footer className="p-4">
-        footerr
-      </footer>
+        <Rodape/>
     </div>
   )
 }
