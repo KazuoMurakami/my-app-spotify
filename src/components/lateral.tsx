@@ -1,5 +1,32 @@
 import { ChevronRight, HomeIcon, Library, Plus, Search } from "lucide-react";
-import Image from "next/image";
+import ListAlbum from "./ListAlbum";
+
+const AlbumImage = [
+    {
+        src: "/images/coldplay.jpeg",
+        alt:"album coldplay"
+    },
+    {
+        src: "/images/imaginedragons.jpg",
+        alt:"album imaginedragons"
+    },
+    {
+        src: "/images/justin.jpg",
+        alt:"album justin"
+    },
+    {
+        src: "/images/shawn.jpg",
+        alt:"album shawn mendes"
+    },
+    {
+        src: "/images/shawn2.jpg",
+        alt:"album shawn mendes"
+    },
+    {
+        src: "/images/download.jpg",
+        alt:"album imagine dragons"
+    },
+]
 export function Lateral(){
     return(
         <aside className="w-80  bg-zinc-800/40 p-2 rounded flex flex-col overflow-y-hidden">
@@ -16,21 +43,13 @@ export function Lateral(){
             </nav>
             <div className="flex overflow-auto scrollbar">
               <nav className="flex flex-col flex-1">
-              <a href="" className="flex-1 items-center flex gap-2 hover:bg-zinc-600/20 ease-out duration-500 pt-2 pr-2 pb-2"> <Image src="/images/coldplay.jpeg" alt="album coldplay" width={50} height={50}/> <span><h1 className="text-zinc-50">title</h1>playlist</span></a>
-              <a href="" className="flex-1 items-center flex gap-2 hover:bg-zinc-600/20 ease-out duration-500 pt-2 pr-2 pb-2"> <Image src="/images/coldplay.jpeg" alt="album coldplay" width={50} height={50}/> <span><h1 className="text-zinc-50">title</h1>playlist</span></a>
-              <a href="" className="flex-1 items-center flex gap-2 hover:bg-zinc-600/20 ease-out duration-500 pt-2 pr-2 pb-2"> <Image src="/images/coldplay.jpeg" alt="album coldplay" width={50} height={50}/> <span><h1 className="text-zinc-50">title</h1>playlist</span></a>
-              <a href="" className="flex-1 items-center flex gap-2 hover:bg-zinc-600/20 ease-out duration-500 pt-2 pr-2 pb-2"> <Image src="/images/coldplay.jpeg" alt="album coldplay" width={50} height={50}/> <span><h1 className="text-zinc-50">title</h1>playlist</span></a>
-              <a href="" className="flex-1 items-center flex gap-2 hover:bg-zinc-600/20 ease-out duration-500 pt-2 pr-2 pb-2"> <Image src="/images/coldplay.jpeg" alt="album coldplay" width={50} height={50}/> <span><h1 className="text-zinc-50">title</h1>playlist</span></a>
-              <a href="" className="flex-1 items-center flex gap-2 hover:bg-zinc-600/20 ease-out duration-500 pt-2 pr-2 pb-2"> <Image src="/images/coldplay.jpeg" alt="album coldplay" width={50} height={50}/> <span><h1 className="text-zinc-50">title</h1>playlist</span></a>
-              <a href="" className="flex-1 items-center flex gap-2 hover:bg-zinc-600/20 ease-out duration-500 pt-2 pr-2 pb-2"> <Image src="/images/coldplay.jpeg" alt="album coldplay" width={50} height={50}/> <span><h1 className="text-zinc-50">title</h1>playlist</span></a>
-              <a href="" className="flex-1 items-center flex gap-2 hover:bg-zinc-600/20 ease-out duration-500 pt-2 pr-2 pb-2"> <Image src="/images/coldplay.jpeg" alt="album coldplay" width={50} height={50}/> <span><h1 className="text-zinc-50">title</h1>playlist</span></a>
-              <a href="" className="flex-1 items-center flex gap-2 hover:bg-zinc-600/20 ease-out duration-500 pt-2 pr-2 pb-2"> <Image src="/images/coldplay.jpeg" alt="album coldplay" width={50} height={50}/> <span><h1 className="text-zinc-50">title</h1>playlist</span></a>
-              <a href="" className="flex-1 items-center flex gap-2 hover:bg-zinc-600/20 ease-out duration-500 pt-2 pr-2 pb-2"> <Image src="/images/coldplay.jpeg" alt="album coldplay" width={50} height={50}/> <span><h1 className="text-zinc-50">title</h1>playlist</span></a>
-              <a href="" className="flex-1 items-center flex gap-2 hover:bg-zinc-600/20 ease-out duration-500 pt-2 pr-2 pb-2"> <Image src="/images/coldplay.jpeg" alt="album coldplay" width={50} height={50}/> <span><h1 className="text-zinc-50">title</h1>playlist</span></a>
-              <a href="" className="flex-1 items-center flex gap-2 hover:bg-zinc-600/20 ease-out duration-500 pt-2 pr-2 pb-2"> <Image src="/images/coldplay.jpeg" alt="album coldplay" width={50} height={50}/> <span><h1 className="text-zinc-50">title</h1>playlist</span></a>
-              <a href="" className="flex-1 items-center flex gap-2 hover:bg-zinc-600/20 ease-out duration-500 pt-2 pr-2 pb-2"> <Image src="/images/coldplay.jpeg" alt="album coldplay" width={50} height={50}/> <span><h1 className="text-zinc-50">title</h1>playlist</span></a>
-              <a href="" className="flex-1 items-center flex gap-2 hover:bg-zinc-600/20 ease-out duration-500 pt-2 pr-2 pb-2"> <Image src="/images/coldplay.jpeg" alt="album coldplay" width={50} height={50}/> <span><h1 className="text-zinc-50">title</h1>playlist</span></a>
-              <a href="" className="flex-1 items-center flex gap-2 hover:bg-zinc-600/20 ease-out duration-500 pt-2 pr-2 pb-2"> <Image src="/images/coldplay.jpeg" alt="album coldplay" width={50} height={50}/> <span><h1 className="text-zinc-50">title</h1>playlist</span></a>
+                {
+                    AlbumImage.map(function(item){
+                        return (
+                            <ListAlbum urlImage={item.src} alt={item.alt}/>
+                        )
+                    })
+                }
             </nav>
             </div>
         </aside>

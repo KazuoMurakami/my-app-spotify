@@ -1,5 +1,38 @@
 import { Airplay, Box, ChevronLeft, ChevronRight, Play } from "lucide-react";
-
+import AlbumPrincipal from "./AlbumPrincipal";
+import FavoriteAlbum from "./FavoriteAlbum";
+const AlbumImage = [
+    {
+        src: "/images/coldplay.jpeg",
+        alt:"album coldplay",
+        content: "coldplay"
+    },
+    {
+        src: "/images/imaginedragons.jpg",
+        alt:"album imaginedragons",
+        content: "imagineDragons"
+    },
+    {
+        src: "/images/justin.jpg",
+        alt:"album justin",
+        content: "imagineDragons"
+    },
+    {
+        src: "/images/shawn.jpg",
+        alt:"album shawn mendes",
+        content: "shawn mendes"
+    },
+    {
+        src: "/images/shawn2.jpg",
+        alt:"album shawn mendes",
+        content: "shawn mendes"
+    },
+    {
+        src: "/images/download.jpg",
+        alt:"album imagine dragons",
+        content: "imagineDragons"
+    },
+]
 export function Principal(){
     return(
         <main className="flex-1 p-4 bg-gradient-to-b from-green-900 from-10% to-zinc-800/40 to-30% ml-2 rounded">
@@ -20,45 +53,24 @@ export function Principal(){
         <h1 className="font-semibold text-4xl mt-10 text-green-200">Good Afternoon</h1>
             
         <div className="grid grid-cols-3 gap-6">
-            <div className="bg-white/10 flex items-center gap-3 hover:bg-white/30 cursor-pointer rounded group">
-                <img src="/images/coldplay.jpeg" alt="album coldplay" className="h-28"/>
-                <span className="flex-1">playlist</span>
-                <button className="w-12 h-12 flex items-center justify-center pl-1 rounded-full bg-green-600 text-black ml-auto mr-8 invisible group-hover:visible"><Play /></button>
-            </div>
-            <div className="bg-white/10 flex items-center gap-3 hover:bg-white/30 cursor-pointer rounded group">
-                <img src="/images/coldplay.jpeg" alt="album coldplay" className="h-28"/>
-                <span className="flex-1">playlist</span>
-                <button className="w-12 h-12 flex items-center justify-center pl-1 rounded-full bg-green-600 text-black ml-auto mr-8 invisible group-hover:visible"><Play /></button>
-            </div>
-            <div className="bg-white/10 flex items-center gap-3 hover:bg-white/30 cursor-pointer rounded group">
-                <img src="/images/coldplay.jpeg" alt="album coldplay" className="h-28"/>
-                <span className="flex-1">playlist</span>
-                <button className="w-12 h-12 flex items-center justify-center pl-1 rounded-full bg-green-600 text-black ml-auto mr-8 invisible group-hover:visible"><Play /></button>
-            </div>
-            <div className="bg-white/10 flex items-center gap-3 hover:bg-white/30 cursor-pointer rounded group">
-                <img src="/images/coldplay.jpeg" alt="album coldplay" className="h-28"/>
-                <span className="flex-1">playlist</span>
-                <button className="w-12 h-12 flex items-center justify-center pl-1 rounded-full bg-green-600 text-black ml-auto mr-8 invisible group-hover:visible"><Play /></button>
-            </div>
-            <div className="bg-white/10 flex items-center gap-3 hover:bg-white/30 cursor-pointer rounded group">
-                <img src="/images/coldplay.jpeg" alt="album coldplay" className="h-28"/>
-                <span className="flex-1">playlist</span>
-                <button className="w-12 h-12 flex items-center justify-center pl-1 rounded-full bg-green-600 text-black ml-auto mr-8 invisible group-hover:visible"><Play /></button>
-            </div>
-            <div className="bg-white/10 flex items-center gap-3 hover:bg-white/30 cursor-pointer rounded group">
-                <img src="/images/coldplay.jpeg" alt="album coldplay" className="h-28"/>
-                <span className="flex-1">playlist</span>
-                <button className="w-12 h-12 flex items-center justify-center pl-1 rounded-full bg-green-600 text-black ml-auto mr-8 invisible group-hover:visible"><Play /></button>
-            </div>
+            {
+            AlbumImage.map(function(item){
+                return(
+                    <FavoriteAlbum src={item.src} alt={item.alt} texto={item.content}/>
+                )
+            })
+        }
         </div>
         <h1 className="font-semibold text-4xl mt-10 text-green-200">Seus favoritos</h1>
-
-        <div className="grid grid-cols-5 gap-6">
-            <div className="bg-white/10 flex item-center gap-3"><img src="/images/coldplay.jpeg" alt="album coldplay" /></div>
-            <div className="bg-white/10 flex item-center gap-3"><img src="/images/coldplay.jpeg" alt="album coldplay" /></div>
-            <div className="bg-white/10 flex item-center gap-3"><img src="/images/coldplay.jpeg" alt="album coldplay" /></div>
-            <div className="bg-white/10 flex item-center gap-3"><img src="/images/coldplay.jpeg" alt="album coldplay" /></div>
-            <div className="bg-white/10 flex item-center gap-3"><img src="/images/coldplay.jpeg" alt="album coldplay" /></div>
+        <div className="grid grid-cols-6 gap-6">
+            {
+                AlbumImage.map(function(item){
+                    return(
+                        <AlbumPrincipal src={item.src} alt={item.alt} content={item.content}/>
+                    )
+                })
+            }
+           
         </div>
         </main>
     )
