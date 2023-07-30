@@ -4,27 +4,33 @@ import ListAlbum from "./ListAlbum";
 const AlbumImage = [
     {
         src: "/images/coldplay.jpeg",
-        alt:"album coldplay"
+        alt:"album coldplay",
+        content: "coldplay"
     },
     {
         src: "/images/imaginedragons.jpg",
-        alt:"album imaginedragons"
+        alt:"album imagine dragons",
+        content: "imagine Dragons"
     },
     {
         src: "/images/justin.jpg",
-        alt:"album justin"
+        alt:"album justin",
+        content: "imagine Dragons"
     },
     {
         src: "/images/shawn.jpg",
-        alt:"album shawn mendes"
+        alt:"album shawn mendes",
+        content: "shawn mendes"
     },
     {
         src: "/images/shawn2.jpg",
-        alt:"album shawn mendes"
+        alt:"album shawn mendes",
+        content: "shawn mendes"
     },
     {
         src: "/images/download.jpg",
-        alt:"album imagine dragons"
+        alt:"album imagine dragons",
+        content: "imagine Dragons"
     },
 ]
 export function Lateral(){
@@ -46,7 +52,7 @@ export function Lateral(){
                 {
                     AlbumImage.map(function(item){
                         return (
-                            <ListAlbum urlImage={item.src} alt={item.alt}/>
+                            <ListAlbum urlImage={item.src} alt={item.alt} content={item.content}/>
                         )
                     })
                 }
